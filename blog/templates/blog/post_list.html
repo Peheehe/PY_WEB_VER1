@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post List</title>
+    {% load staticfiles %}
+</head>
+<body>
+
+<div id="content">
+    {% for post in object_list %}
+    <div class="box">
+        <a style="color: blue">BLOG</a>
+        <p>{{ post.title }}</p>
+        <img src="{{ post.image.url }}">
+        <p>{{ post.description }}</p>
+        <li>Create Date: {{ post.create_date }}</li>
+        <li>Modify Date: {{ post.modify_date }}</li>
+    </div>
+    {% endfor %}
+</div>
+<style>
+    .box{
+        width:400px; height:auto;
+        border: 1px solid lightgray;
+        display: inline-block;
+    }
+    img{
+        width:550px; height:400px;
+        margin:auto; display:block;
+    }
+    #content{
+        width:400px; height: 400px;
+        margin:auto; display:block;
+    }
+</style>
+</body>
+</html>
