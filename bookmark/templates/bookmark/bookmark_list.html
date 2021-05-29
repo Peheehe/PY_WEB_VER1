@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #content{
+        text-align:center;
+        font-size: 30px;
+        font-family: 'Raleay', sans-serif;
+        width:900px; height:900px;
+        margin: auto;
+    }
+    </style>
+</head>
+<body>
+
+<div id="content">
+
+    <h1>U<span class="small">h</span>
+        𝝅<span class = "small"></span>
+        NA<span class="small">GA</span></h1>
+
+    <ul>
+        {% for bookmark in object_list %}
+        <li><a href="{% url 'detail' bookmark.id %}">{{ bookmark }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+</body>
+</html>
