@@ -11,22 +11,23 @@
             position: absolute;
             text-align: center;
             transform:translate(-50%, -50%);
-            color: white;
+            color: Black;
             width: 100%;
         }
         #title{
-            left: 50%;
+            left: 30%;
             top: 20%;
             font-size: 60px;
+            font-weight: bolder;
         }
         #made{
-            left: 50%;
-            top: 60%;
+            left: 86%;
+            top: 28%;
             font-size: 25px;
          }
         #menu{
-            left: 50%;
-            top: 35%;
+            left: 30%;
+            top: 30%;
             font-size: 30px;
         }
         li{
@@ -38,7 +39,8 @@
         }
         a{
             text-decoration: none;
-            color: white;
+            color: Black;
+
         }
         #dlab{
             color: orangered;
@@ -46,27 +48,44 @@
         #username{
             color: greenyellow;
         }
-
+        #auth2{
+            left:85%;
+            top:20%;
+            color:blue;
+        }
+        .auth_menu{
+            font-size:25px;
+            color:blue;
+        }
+        .box{
+            font-size:100px;
+            color:blue;
     </style>
 </head>
     <body>
 
         <iframe width="100%" height="1060"
-                src="https://www.youtube.com/embed/xx6gOs04iaY?autoplay=1*mute=1"
+                src="https://www.youtube.com/embed/xx6gOs04iaY?autoplay=1&mute=1"
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
 
         </iframe>
         <h1 class="main_text" id="title">DJANGO FRAMEWORK</h1>
-        <h1 class="main_text" id="made">Made By</h1>
+        <h1 class="main_text" id="made">Made By
             <span id="username">Jeong</span> &amp;
             <span id="dlab">DLAB</span>
-        <h1>
-            <ul class="main_text" id="menu">
+        </h1>
+
+        <ul class="main_text" id="menu">
             <li><a href="{% url 'admin:index' %}">ADMIN</a></li>
             <li><a href="{% url 'bookmark_index' %}">BOOKMARK</a></li>
             <li><a href="{% url 'blog_index' %}">BLOG</a></li>
-            </ul>
-        </h1>
+        </ul>
+
+        <ul class = "main_text" id = "auth2">
+            <li><a class="auth_menu" href="#">SIGN IN</a></li>
+            <li><a class="auth_menu" href="{% url 'register' %}">SIGN UP</a></li>
+        </ul>
+
     </body>
 </html>
